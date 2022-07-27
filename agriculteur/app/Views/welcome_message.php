@@ -17,7 +17,7 @@
                 <div class="card shadow" style="border-radius: 24px;">
                     <div class="p-2">
                     <form class="" action="#" id="form-submit" novalidate>
-                        <div class="d-flex justify-content-start" style=" border:red 1px solid; margin-left:-30px">
+                        <div class="d-flex justify-content-start fline pt-4">
                             <div class=" form-check">
                                 <input value="Mr." type="radio" class="form__radio-input" id="exampleCheck1" name="gender" checked>
                                 <label class="form__radio-label" for="exampleCheck1">Mr.</label>
