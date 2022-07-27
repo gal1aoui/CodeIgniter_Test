@@ -68,7 +68,7 @@ class AgriculteurController extends BaseController
             foreach($agriculteurs as $agriculteur)
             {
                 $html .='<tr>
-                <th><a class="delete_icon" href="#" id="'. $agriculteur['id'] .'"><span class="bi bi-x-lg fs-3"></span></a></th>
+                <th><a class="delete_icon btn" href="#" id="'. $agriculteur['id'] .'"><span class="bi bi-x-lg fs-3"></span></a></th>
                 <td>'. $agriculteur['gender'] .'</td>
                 <td>'. explode(" ",$agriculteur['name'])[0] .'</td>
                 <td>'. explode(" ", $agriculteur['name'])[1] .'</td>
