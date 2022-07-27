@@ -23,10 +23,22 @@ class AgriculteurController extends BaseController
 
         $validation = Services::validation();
         $validation->setRules([
-            'firstname' => 'required|min_length[3]',
-            'lastname' => 'required|min_length[3]',
-            'age' => 'required'
-        ]);
+            'firstname' => 'min_length[3]',
+            'lastname' => 'min_length[3]',
+            'age' => 'min_length[3]',
+        ],
+        [
+            'firstname' => [
+                'min_length' => 'Le Nom doit Contenir au minimum 3 characters'
+            ],
+            'lastname' => [
+                'min_length' => 'Le Prénom doit Contenir au minimum 3 characters'
+            ],
+            'age' => [
+                'min_length' => "L'age est un champ obligatoire"
+            ]
+        ]
+        );
 
         if(!$validation->withRequest($this->request)->run())
         {

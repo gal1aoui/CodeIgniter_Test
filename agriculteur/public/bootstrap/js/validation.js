@@ -16,14 +16,38 @@ $(function(){
                 processData: false,
                 dataType: 'json',
                 success: function(res){
+                    msg='';
                     if(res.error){
-                        
-                    }
+                        if(res.message.firstname){
+                            msg += res.message.firstname +"<br/>";
+                            $('#exampleInputEmail').addClass('is-invalid');
+                        }else{
+                            $('#exampleInputEmail').addClass('is-valid');
+                            $('#exampleInputEmail').removeClass('is-invalid');
+                        }
+                        if(res.message.lastname){
+                            msg += res.message.lastname+"<br/>";
+                            $('#exampleInputEmail1').addClass('is-invalid');
+                        }else{
+                            $('#exampleInputEmail1').addClass('is-valid');
+                            $('#exampleInputEmail1').removeClass('is-invalid');
+                        }
+                        if(res.message.age){
+                            msg += res.message.age+"<br/>";
+                        }
+                            
+                        Swal.fire(
+                            'Erreur',
+                            msg,
+                            'warning'
+                        );    
+                    }else{
                     Swal.fire(
                         'Ajouté',
                         res.message,
                         'success'
                     );
+                    }
                     fetchAllAgriculteurs();
                 }
             });

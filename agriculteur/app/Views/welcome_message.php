@@ -29,18 +29,18 @@
                         </div>
                         <div class="d-flex justify-content-between col-12 p-4">
                                 <div class="mb-3 col-3">
-                                    <input type="text" name="firstname" class="form-control fs-5 border-dark" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom" required>
-                                    <div class="invalid-feedback">FirstName is Required</div>
+                                    <input type="text" name="firstname" class="form-control fs-5 border-dark" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Nom" required>
+                                    <div class="invalid-feedback">Nom ne peut pas vide</div>
                                     <button type="submit" class="btn btn-success fs-5 mt-4" id="btn-form">Ajouter</button>
                                 </div>
                                 <div class="mb-3 col-3">
                                     <input type="text" name="lastname" class="form-control fs-5 border-dark" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Prénom" required>
-                                    <div class="invalid-feedback">LastName is Required</div>
+                                    <div class="invalid-feedback">Prénom ne peut pas vide</div>
                                 </div>
                             
                                 <div class="mb-3 col-3">
-                                    <select name="age" class="form-select overflow-hidden p-3 fs-5 border-dark" size="3" aria-label=" select example" value="" required>
-                                        <option disabled selected value>Tranche d'age <span class="bi bi-chevron-down"></span></option>
+                                    <select name="age" class="form-select overflow-hidden p-3 fs-5 border-dark" size="3" aria-label=" select example" id="select-form" required>
+                                        <option disabled selected value="">Tranche d'age <span class="bi bi-chevron-down"></span></option>
                                         <option value="40-50">40-50</option>
                                         <option value="30-40">30-40</option>
                                     </select>
