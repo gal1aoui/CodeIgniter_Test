@@ -7,13 +7,7 @@
     <title>Liste d'agriculteurs</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <style>
-        .vertical-center {
-            display: flex;
-            align-items: center;
-            min-height: 50vh;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/style.css'); ?>">
 </head>
 <body style="background: #9fd8bd;">
     <div class="container p-5">
@@ -23,14 +17,14 @@
                 <div class="card shadow" style="border-radius: 24px;">
                     <div class="p-2">
                     <form class="" action="#" id="form-submit" novalidate>
-                        <div class="d-flex justify-content-between col-2 p-4">
+                        <div class="d-flex justify-content-start" style=" border:red 1px solid; margin-left:-30px">
                             <div class=" form-check">
-                                <input value="Mr." type="radio" class="form-check-input" id="exampleCheck1" name="gender" checked>
-                                <label class="form-check-label" for="exampleCheck1">Mr.</label>
+                                <input value="Mr." type="radio" class="form__radio-input" id="exampleCheck1" name="gender" checked>
+                                <label class="form__radio-label" for="exampleCheck1">Mr.</label>
                             </div>
                             <div class="form-check">
-                                <input value="Mme." type="radio" class="form-check-input" id="exampleCheck1" name="gender">
-                                <label class="form-check-label" for="exampleCheck1">Mme.</label>
+                                <input value="Mme." class="form__radio-input" type="radio" id="exampleCheck1" name="gender">
+                                <label class="form__radio-label" for="exampleCheck1">Mme.</label>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between col-12 p-4">
