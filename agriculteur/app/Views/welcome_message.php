@@ -11,7 +11,7 @@
 </head>
 <body style="background: #9fd8bd;">
     <div class="container p-5">
-    <h1 class="">Ajouter un agriculteur</h1>
+    <h1 class="text-secondary">Ajouter un agriculteur</h1>
         <div class="row my-4 vertical-center">
             <div class="col-lg-12">
                 <div class="card shadow" style="border-radius: 24px;">
