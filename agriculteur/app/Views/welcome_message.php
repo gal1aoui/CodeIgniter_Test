@@ -16,7 +16,7 @@
             <div class="col-lg-12">
                 <div class="card shadow" style="border-radius: 24px;">
                     <div class="p-2">
-                    <form class="" action="#" id="form-submit" novalidate>
+                    <form class="" action="#" id="form-submit" method="post" novalidate>
                         <div class="d-flex justify-content-start fline pt-4">
                             <div class=" form-check">
                                 <input value="Mr." type="radio" class="form__radio-input" id="exampleCheck1" name="gender" checked>
@@ -59,14 +59,8 @@
                                 <th scope="col">Age</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                <th><span class="bi bi-x-lg fs-3"></span></th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>28</td>
-                                </tr>
+                            <tbody id="show_agriculteurs">
+                                
                             </tbody>
                         </table>
                         </div>

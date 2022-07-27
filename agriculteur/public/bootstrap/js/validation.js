@@ -8,7 +8,7 @@ $(function(){
         }else{
             $("#btn-form").text("Ajout en cours ...");
             $.ajax({
-                url:'<?= base_url("agriculteur/add") ?>',
+                url:'agriculteur/add',
                 method: 'post',
                 data: formData,
                 contentType: false,
@@ -16,9 +16,59 @@ $(function(){
                 processData: false,
                 dataType: 'json',
                 success: function(res){
-                    console.log(res);
+                    if(res.error){
+                        
+                    }
+                    Swal.fire(
+                        'Ajouté',
+                        res.message,
+                        'success'
+                    );
+                    fetchAllAgriculteurs();
                 }
-            })
+            });
+            $("#btn-form").text("Ajouter");
         }
     });
+
+    fetchAllAgriculteurs();
+
+      function fetchAllAgriculteurs() {
+        $.ajax({
+          url: '/agriculteur/get',
+          method: 'get',
+          success: function(response) {
+            $("#show_agriculteurs").html(response.message);
+          }
+        });
+    }
+
+    $(document).delegate('.delete_icon', 'click', function(e) {
+        e.preventDefault();
+        const id = $(this).attr('id');
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $.ajax({
+              url: 'agriculteur/delete/'+ id,
+              method: 'get',
+              success: function(response) {
+                Swal.fire(
+                  'Deleted!',
+                  response.message,
+                  'success'
+                )
+                fetchAllAgriculteurs();
+              }
+            });
+          }
+        })
+      });
 });

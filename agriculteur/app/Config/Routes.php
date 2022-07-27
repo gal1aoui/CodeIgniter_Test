@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\AgriculteurController;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -36,7 +38,9 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'AgriculteurController::index');
-
+$routes->post('agriculteur/add', 'AgriculteurController::add');
+$routes->get('agriculteur/get', 'AgriculteurController::get');
+$routes->get('agriculteur/delete/(:num)','AgriculteurController::delete/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
